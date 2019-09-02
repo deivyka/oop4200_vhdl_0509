@@ -42,12 +42,17 @@ begin
     rst <= '0';
     ctrl <= "10"; -- right shift
     d <= "11111111"; 
-    wait for clk_period*7;
-    ctrl <= "01"; -- left shift
-    wait for clk_period*7;
+    wait for clk_period*8;
     rst <= '1';
+    wait for clk_period*2;
+    rst <= '0';
+    ctrl <= "01"; -- left shift
+    wait for clk_period*8;
+    rst <= '1';
+    wait for clk_period*2;
+    rst <= '0';
     ctrl <= "11"; -- parallel
-    
-
+    d <= "10100101";
+    wait for clk_period*8;
 end process;
 end;

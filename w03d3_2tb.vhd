@@ -45,7 +45,7 @@ begin
     wait for clk_period*7;
     ctrl <= "01"; -- left shift
     wait for clk_period*7;
-    rst <= '0';
+    rst <= '1';
     ctrl <= "11"; -- parallel
     
 

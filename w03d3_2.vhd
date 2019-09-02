@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 entity slr8bits is
-    Port ( clk, rst, sin: in std_logic;
+    Port ( clk, rst: in std_logic;
            ctrl: in std_logic_vector(1 downto 0);
            d: in std_logic_vector (7 downto 0);
            dout: out std_logic_vector (7 downto 0)

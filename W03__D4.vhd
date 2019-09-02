@@ -1,3 +1,5 @@
+-- need to add clear, enable, load, and 8-bit initial count value
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.std_logic_unsigned.all;

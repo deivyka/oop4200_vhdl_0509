@@ -1,4 +1,4 @@
--- need to add clear, enable, load, and 8-bit initial count value
+-- need to add clear, enable, load, and 8-bit initial count value (see ffin, ffout)
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

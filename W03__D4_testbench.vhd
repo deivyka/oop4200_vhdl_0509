@@ -20,7 +20,8 @@ signal cnt_out : std_logic_vector(7 downto 0);
 begin
 
 uut: w03d4 port map(
-            clk => clk, dir => dir, rst => rst, cnt_out => cnt_out
+            clk => clk, dir => dir, rst => rst, 
+            cnt_out => cnt_out
         );
 
 clk_process: process

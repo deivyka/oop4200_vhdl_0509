@@ -8,22 +8,22 @@ architecture Behavioral of w03d3_2tb is
     constant clk_period : time := 10ns;
 
 component slr8bits
-    port (clk, rst: in std_logic;
+    port (clk, rst, sin: in std_logic;
           ctrl: in std_logic_vector(1 downto 0);
-          d: in std_logic_vector(7 downto 0);
+          p_load: in std_logic_vector(7 downto 0);
           dout: out std_logic_vector(7 downto 0));
 end component;
 
 signal clk, rst, sin : std_logic;
 signal ctrl : std_logic_vector(1 downto 0);
-signal d : std_logic_vector(7 downto 0);
+signal p_load : std_logic_vector(7 downto 0);
 signal dout : std_logic_vector(7 downto 0);
 
 begin
 
 uut: slr8bits port map(
-        clk => clk, rst => rst,
-        ctrl => ctrl, d => d, dout => dout
+        clk => clk, rst => rst, sin => sin,
+        ctrl => ctrl, p_load => p_load, dout => dout
     );
 
 -- clock process
@@ -41,7 +41,7 @@ begin
     wait for clk_period*2;
     rst <= '0';
     ctrl <= "10"; -- right shift
-    d <= "11111111"; 
+    sin <= '1'; 
     wait for clk_period*8;
     rst <= '1';
     wait for clk_period*2;
@@ -51,8 +51,8 @@ begin
     rst <= '1';
     wait for clk_period*2;
     rst <= '0';
+    p_load <= "01010101";
     ctrl <= "11"; -- parallel
-    d <= "10100101";
     wait for clk_period*8;
 end process;
 end;

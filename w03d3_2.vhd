@@ -28,6 +28,6 @@ with ctrl select
         ffout                       when "00",
         ffout (6 downto 0) & d(0)   when "01", -- left-shift
         d(7) & ffout(7 downto 1)    when "10", -- right-shift
-        d                           when others;
+        d                           when others; -- parallel
 dout <= ffout;
 end arch;

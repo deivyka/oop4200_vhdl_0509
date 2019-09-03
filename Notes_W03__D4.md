@@ -5,10 +5,13 @@ Consider an 8-bit universal binary counter supporting an asynchronous reset inpu
 
 #### 1. Use the template below to create a function table describing the operation of this circuit.
 
-reset  | clear  | enable | load   | direction | c_in(7:0) | c_out(7:0)
------- | ------ | ------ | ------ | ------    | ------    | ------ 
-0      | 0      | 1      | 1      | up        | 0         | 0001
-0      | 0      | 1      | 0      | x         | 0         | 0010
+reset  | clear  | enable | load   | direction | c_in(7:0)       | c_out(7:0)
+------ | ------ | ------ | ------ | ------    | --------------- | ------ 
+1      | X      | X      | X      | X         | X               | X
+0      | 1      | X      | X      | X         | X               | Clear to 0
+0      | 0      | 1      | X      | 1         | X               | Count up
+0      | 0      | 1      | 1      | 1         | load input      | Count up
+
 
 *not done*
 
@@ -19,7 +22,7 @@ reset  | clear  | enable | load   | direction | c_in(7:0) | c_out(7:0)
 
 #### 3. Prove the correctness of your design by simulation in Vivado.
 
-``` run W03__D4_testbench.vhd ```
+``` run W03__D4_testbench.vhd ``` *not done*
 
 #### 4. How would you change the function table and design file if you wanted to change the relative priority of the clear and load inputs?
 

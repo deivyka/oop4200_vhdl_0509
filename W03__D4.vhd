@@ -24,9 +24,9 @@ begin
     end if;
 end process;
 
-ffin <= (others => '0') when (clear = '1') else -- clear = clear c_out
+ffin <= (others => '0') when (clear = '1') else -- clear c_out
         ffout when (enable = '0') else          -- no action
-        unsigned(c_in) when (load = '1') else   -- load = load initial value c_in
+        unsigned(c_in) when (load = '1') else   -- load initial value c_in
         ffout+1 when (direction = '1') else     -- count up
         ffout-1;
 

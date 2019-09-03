@@ -15,11 +15,11 @@ reset  | clear  | enable | load   | direction | c_in(7:0) | c_out(7:0)
 
 #### 2. Create a VHDL design file complying with the functional requirements presented in the previous table.
 
-```see W03__D4.vhd ``` *not done*
+```see W03__D4.vhd ```
 
 #### 3. Prove the correctness of your design by simulation in Vivado.
 
-``` run W03__D4_testbench.vhd ``` *not done*
+``` run W03__D4_testbench.vhd ```
 
 #### 4. How would you change the function table and design file if you wanted to change the relative priority of the clear and load inputs?
 

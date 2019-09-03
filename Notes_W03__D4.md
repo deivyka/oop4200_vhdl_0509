@@ -5,12 +5,11 @@ Consider an 8-bit universal binary counter supporting an asynchronous reset inpu
 
 #### 1. Use the template below to create a function table describing the operation of this circuit.
 
-reset  | clear  | enable | load   | direction | c_in(7:0)       | c_out(7:0)
------- | ------ | ------ | ------ | ------    | --------------- | ------ 
-1      | X      | X      | X      | X         | X               | X
-0      | 1      | X      | X      | X         | X               | Clear to 0
-0      | 0      | 1      | X      | 1         | X               | Count up
-0      | 0      | 1      | 1      | 1         | load input      | Count up
+clear  | enable | load   | direction | c_in(7:0)       | c_out(7:0)
+------ | ------ | ------ | ------    | --------------- | ------ 
+1      | X      | X      | X         | X               | Clear to 0
+0      | 1      | X      | 1         | X               | Count up
+0      | 1      | 1      | 1         | load input      | Count up
 
 
 *not done*

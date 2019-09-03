@@ -2,7 +2,6 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-
 entity UniBitCnt_tb is
 end UniBitCnt_tb;
 
@@ -36,18 +35,23 @@ end process;
 
 stim: process
 begin
-    reset <='1';
-    clear <= '1';
+        reset <='1';
+        clear <= '1';
     wait for clk_period;
-    clear <= '0';
-    reset <='0';
-    enable <= '1';
-    direction <= '1'; -- count up
+        clear <= '0';
+        reset <='0';
+        enable <= '1';
+        direction <= '1';   -- count up
     wait for clk_period*16;
-    direction <= '0'; -- count down
+        direction <= '0';   -- count down
     wait for clk_period*16;
-    -- clear <= '1';
-    -- c_in = "0000 1111";
+        reset <= '1';
+        clear <= '1';
+    wait for clk_period;
+        reset <='0';
+        clear <='0';
+        load <='1';         -- load initial value
+        c_in <= "00001111";
     wait for clk_period*8;
 end process;
 end;

@@ -36,22 +36,18 @@ end process;
 stim: process
 begin
         reset <='1';
-        clear <= '1';
     wait for clk_period;
-        clear <= '0';
-        reset <='0';
+        reset <= '0';
+        c_in <= "00001111";
+        load <= '1';
+    wait for clk_period;
+        load <= '0';
         enable <= '1';
         direction <= '1';   -- count up
     wait for clk_period*16;
         direction <= '0';   -- count down
     wait for clk_period*16;
-        reset <= '1';
         clear <= '1';
     wait for clk_period;
-        reset <='0';
-        clear <='0';
-        load <='1';         -- load initial value
-        c_in <= "00001111";
-    wait for clk_period*8;
 end process;
 end;

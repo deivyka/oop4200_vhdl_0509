@@ -47,6 +47,8 @@ Shift registers consist of D flip-flops. An 8-bit shift register consists of 8 D
 | 10 | right-shift
 | 11 | parallel load
 
+*not done* 
+
 
 https://www.electrical4u.com/universal-shift-registers/
 

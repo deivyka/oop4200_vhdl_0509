@@ -7,11 +7,13 @@ Consider an 8-bit universal binary counter supporting an asynchronous reset inpu
 
 clk    | reset |clear  | enable | load   | direction | c_in(7:0)       | c_out(7:0)
 ------ |------ |------ | ------ | ------ | ------    | --------------- | ------ 
--      |1      |-      | -      | -      | -         | -               | Clear to 0
-↑      |0      |1      | -      | -      | -         | -               | Clear to 0
-↑      |0      |0      | 1      | -      | 1         | -               | Count up
-↑      |0      |0      | 1      | -      | 0         | -               | Count down
+x      |1      | x     | x      | x      | x         | x               | Clear to 0
+↑      |0      |1      | x      | x      | x         | x               | Clear to 0
+↑      |0      |0      | 1      | x      | 1         | x               | Count up
+↑      |0      |0      | 1      | x      | 0         | x               | Count down
 ↑      |0      |0      | 1      | 1      | 1         | load input      | Count up c_in
+
+
 
 ↑ = rising edge
 

@@ -40,12 +40,13 @@ Shift registers consist of D flip-flops. An 8-bit shift register consists of 8 D
 #### 1.	Create a function table describing the operation of the expanded shift-register.
 
 
-| ctrl | Behaviour 
-|---- |-----
-| 00  | Hold state
-| 01 | left-shift
-| 10 | right-shift
-| 11 | parallel load
+reset  | ctrl | dout 
+------ |----  |-----
+1      | X    | Clear to zero
+0      | 00   | Hold state
+0      | 01   | left-shift
+0      | 10   | right-shift
+0      | 11   | parallel load
 
 *not done* 
 

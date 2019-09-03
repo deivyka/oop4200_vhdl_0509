@@ -5,15 +5,13 @@ Consider an 8-bit universal binary counter supporting an asynchronous reset inpu
 
 #### 1. Use the template below to create a function table describing the operation of this circuit.
 
-clear  | enable | load   | direction | c_in(7:0)       | c_out(7:0)
------- | ------ | ------ | ------    | --------------- | ------ 
-1      | X      | X      | X         | X               | Clear to 0
-0      | 1      | X      | 1         | X               | Count up
-0      | 1      | X      | 0         | X               | Count down
-0      | 1      | 1      | 1         | load input      | Count up from input state
-
-
-*not done*
+clk    | reset |clear  | enable | load   | direction | c_in(7:0)       | c_out(7:0)
+------ |------ |------ | ------ | ------ | ------    | --------------- | ------ 
+X      |1      |X      | X      | X      | X         | X               | Clear to 0
+↑      |0      |1      | X      | X      | X         | X               | Clear to 0
+↑      |0      |0      | 1      | X      | 1         | X               | Count up
+↑      |0      |0      | 1      | X      | 0         | X               | Count down
+↑      |0      |0      | 1      | 1      | 1         | load input      | Count up from input state
 
 
 #### 2. Create a VHDL design file complying with the functional requirements presented in the previous table.

@@ -23,4 +23,4 @@ reset  | clear  | enable | load   | direction | c_in(7:0) | c_out(7:0)
 
 #### 4. How would you change the function table and design file if you wanted to change the relative priority of the clear and load inputs?
 
-
+The use of a Case-statement will remove priority.

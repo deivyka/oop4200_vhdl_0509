@@ -9,7 +9,8 @@ clear  | enable | load   | direction | c_in(7:0)       | c_out(7:0)
 ------ | ------ | ------ | ------    | --------------- | ------ 
 1      | X      | X      | X         | X               | Clear to 0
 0      | 1      | X      | 1         | X               | Count up
-0      | 1      | 1      | 1         | load input      | Count up
+0      | 1      | X      | 0         | X               | Count down
+0      | 1      | 1      | 1         | load input      | Count up from input state
 
 
 *not done*

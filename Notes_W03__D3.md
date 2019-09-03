@@ -54,10 +54,11 @@ https://www.electrical4u.com/universal-shift-registers/
 #### 2.	Expand the VHDL description presented to support the additional operating modes.
 
 ```
-see W03__D3.vhd and W03__D3_testbench.vhd	
-
+see W03__D3.vhd
 ```
 
 
 #### 3.	Prove the correctness of your solution by simulation in Vivado.
-
+```
+run simulation with W03__D3_testbench.vhd
+```

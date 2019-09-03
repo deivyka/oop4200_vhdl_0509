@@ -7,12 +7,13 @@ Consider an 8-bit universal binary counter supporting an asynchronous reset inpu
 
 clk    | reset |clear  | enable | load   | direction | c_in(7:0)       | c_out(7:0)
 ------ |------ |------ | ------ | ------ | ------    | --------------- | ------ 
-X      |1      |X      | X      | X      | X         | X               | Clear to 0
-↑      |0      |1      | X      | X      | X         | X               | Clear to 0
-↑      |0      |0      | 1      | X      | 1         | X               | Count up
-↑      |0      |0      | 1      | X      | 0         | X               | Count down
-↑      |0      |0      | 1      | 1      | 1         | load input      | Count up from input state
+-      |1      |-      | -      | -      | -         | -               | Clear to 0
+↑      |0      |1      | -      | -      | -         | -               | Clear to 0
+↑      |0      |0      | 1      | -      | 1         | -               | Count up
+↑      |0      |0      | 1      | -      | 0         | -               | Count down
+↑      |0      |0      | 1      | 1      | 1         | load input      | Count up c_in
 
+↑ = rising edge
 
 #### 2. Create a VHDL design file complying with the functional requirements presented in the previous table.
 
@@ -24,4 +25,4 @@ X      |1      |X      | X      | X      | X         | X               | Clear t
 
 #### 4. How would you change the function table and design file if you wanted to change the relative priority of the clear and load inputs?
 
-The use of a Case-statement will remove priority.
+The use of a Case-statement will remove priority?

@@ -15,7 +15,7 @@ x      |1      | x     | x      | x      | x         | x               | Clear t
 
 
 
-↑ = rising edge
+↑ = rising edge, x = don't care
 
 #### 2. Create a VHDL design file complying with the functional requirements presented in the previous table.
 

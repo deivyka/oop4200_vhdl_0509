@@ -38,6 +38,17 @@ stim: process
 begin
         reset <= '1';
     wait for clk_period;
-        
+        reset <= '0';
+        ctrl <= "000";
+    wait for clk_period*2;
+        ctrl <= "001"; -- count up
+    wait for clk_period*8;
+        ctrl <= "010"; -- count down
+    wait for clk_period*8;
+        c_in <= "00011111";
+        ctrl <= "011"; -- load
+    wait for clk_period;
+        ctrl <= "001";
+    wait for clk_period*8; -- count up from c_in
 end process;
 end;

@@ -22,13 +22,13 @@ uut: slr8bits port map(
         clk => clk, rst => rst, sin => sin,
         ctrl => ctrl, p_load => p_load, dout => dout
     );
--- clock process
+-- clock process (f = 1/10ns = 100 MHz)
 clk_process: process
     begin
         clk <= '0';
-        wait for clk_period/2;
+        wait for clk_period/2; -- off for 5 ns
         clk <= '1';
-        wait for clk_period/2;
+        wait for clk_period/2; -- on for 5 ns
 end process;
 --------------
 stim: process

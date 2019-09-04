@@ -23,9 +23,8 @@ x      |**1**  |x      | x      | x      | x         | x               | Clear t
 
 #### 3. Prove the correctness of your design by simulation in Vivado.
 
-``` run W03__D4_testbench.vhd ``` *not done*
+``` run W03__D4_testbench.vhd ```
 
 #### 4. How would you change the function table and design file if you wanted to change the relative priority of the clear and load inputs?
-
-The use of a with/select-statement will remove priority?
-The expressions of an when/else-statement are evaluated successively, with higher priority given to the earlier expressions.
+The expressions of an when/else-statement are evaluated successively, with higher priority given to the earlier expressions. The use of a with/select-statement will remove priority.
+``` see w03d4_q4.vhd and w03d4_q4_tb.vhd ```

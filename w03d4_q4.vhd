@@ -30,7 +30,7 @@ with ctrl select
             ffout+1         when "001", -- count up
             ffout-1         when "010", -- count down
             unsigned(c_in)  when "011", -- load
-            (others => '0') when "100"; --clear
+            (others => '0') when others; --clear
             
 c_out <= std_logic_vector(ffout);
 end Behavioral;

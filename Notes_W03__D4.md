@@ -29,3 +29,12 @@ x      |**1**  |x      | x      | x      | x         | x               | Clear t
 The expressions of an when/else-statement are evaluated successively, with higher priority given to the earlier expressions. The use of a with/select-statement will remove priority.
 
 ``` see w03d4_q4.vhd and w03d4_q4_tb.vhd ```
+
+clk    | reset |ctrl   | c_in(7:0) | c_out(7:0)
+------ |------ |------ | ------    | --------
+x      |1      |x      |x          |Clear to 0
+↑      |0      |000    |x          |0
+↑      |0      |001    |x          |Count up
+↑      |0      |010    |x          |Count down
+↑      |0      |011    |load input |c_in ± 1
+↑      |0      |100    |x          |Clear to 0

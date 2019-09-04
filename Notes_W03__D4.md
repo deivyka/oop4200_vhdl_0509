@@ -27,4 +27,5 @@ x      |**1**  |x      | x      | x      | x         | x               | Clear t
 
 #### 4. How would you change the function table and design file if you wanted to change the relative priority of the clear and load inputs?
 
-The use of a Case-statement will remove priority?
+The use of a with/select-statement will remove priority?
+The expressions of an when/else-statement are evaluated successively, with higher priority given to the earlier expressions.

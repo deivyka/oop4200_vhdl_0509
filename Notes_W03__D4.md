@@ -37,4 +37,4 @@ x      |1      |x      |x          |Clear to 0
 ↑      |0      |001    |x          |Count up
 ↑      |0      |010    |x          |Count down
 ↑      |0      |011    |load input |c_in ± 1
-↑      |0      |100    |x          |Clear to 0
+↑      |0      |1--    |x          |Clear to 0

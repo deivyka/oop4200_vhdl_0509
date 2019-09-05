@@ -21,12 +21,13 @@ process (clk, rst)
                 ffout <= ffin;
             end if;
 end process;
--- outputs section
+-- Next-state logic (combinational)
 with ctrl select
     ffin <=
         ffout                      when "00",   -- no action
         ffout (6 downto 0) & sin   when "01",   -- left-shift
         sin & ffout(7 downto 1)    when "10",   -- right-shift
         p_load                     when others; -- parallel
+-- output logic (combinational)
 dout <= ffout;
 end arch;

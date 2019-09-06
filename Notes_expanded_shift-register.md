@@ -1,4 +1,4 @@
-## W03 D3
+## Expanded shift-register
 
 Consider an 8-bit shift-left register and its corresponding VHDL description, and assume that we want to expand it in order to support bidirectional shifting (shift-right) and parallel load inputs.
 

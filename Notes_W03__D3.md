@@ -37,7 +37,7 @@ end arch;
 Shift registers consist of D flip-flops. An 8-bit shift register consists of 8 D flip-flops. Bidirectional shift registers are able to shift data right or left.
 
 
-#### 1.	Create a function table describing the operation of the expanded shift-register.
+#### 1.	Function table describing the operations of the expanded shift-register.
 
 
 clk    |reset  | ctrl | dout 
@@ -47,17 +47,3 @@ x      |1      | X    | Clear to zero
 ↑      |0      | 01   | left-shift
 ↑      |0      | 10   | right-shift
 ↑      |0      | 11   | parallel load
-
-
-
-#### 2.	Expand the VHDL description presented to support the additional operating modes.
-
-```
-see W03__D3.vhd
-```
-
-
-#### 3.	Prove the correctness of your solution by simulation in Vivado.
-```
-run simulation with W03__D3_testbench.vhd
-```
